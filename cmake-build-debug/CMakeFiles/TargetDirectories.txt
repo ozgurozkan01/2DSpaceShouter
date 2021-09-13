@@ -1,0 +1,3 @@
+C:/Users/ozgur/CLionProjects/2DSpaceShouter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/ozgur/CLionProjects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir
+C:/Users/ozgur/CLionProjects/2DSpaceShouter/cmake-build-debug/CMakeFiles/edit_cache.dir
