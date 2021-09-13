@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ozgur\CLionProjects\2DSpaceShouter
+CMAKE_SOURCE_DIR = C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ozgur\CLionProjects\2DSpaceShouter\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SFML.dir/depend.make
@@ -68,44 +68,44 @@ include CMakeFiles/SFML.dir/flags.make
 CMakeFiles/SFML.dir/main.cpp.obj: CMakeFiles/SFML.dir/flags.make
 CMakeFiles/SFML.dir/main.cpp.obj: CMakeFiles/SFML.dir/includes_CXX.rsp
 CMakeFiles/SFML.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ozgur\CLionProjects\2DSpaceShouter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SFML.dir/main.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFML.dir\main.cpp.obj -c C:\Users\ozgur\CLionProjects\2DSpaceShouter\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SFML.dir/main.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFML.dir\main.cpp.obj -c C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\main.cpp
 
 CMakeFiles/SFML.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML.dir/main.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ozgur\CLionProjects\2DSpaceShouter\main.cpp > CMakeFiles\SFML.dir\main.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\main.cpp > CMakeFiles\SFML.dir\main.cpp.i
 
 CMakeFiles/SFML.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML.dir/main.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ozgur\CLionProjects\2DSpaceShouter\main.cpp -o CMakeFiles\SFML.dir\main.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\main.cpp -o CMakeFiles\SFML.dir\main.cpp.s
 
 CMakeFiles/SFML.dir/Game.cpp.obj: CMakeFiles/SFML.dir/flags.make
 CMakeFiles/SFML.dir/Game.cpp.obj: CMakeFiles/SFML.dir/includes_CXX.rsp
 CMakeFiles/SFML.dir/Game.cpp.obj: ../Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ozgur\CLionProjects\2DSpaceShouter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SFML.dir/Game.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFML.dir\Game.cpp.obj -c C:\Users\ozgur\CLionProjects\2DSpaceShouter\Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SFML.dir/Game.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFML.dir\Game.cpp.obj -c C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\Game.cpp
 
 CMakeFiles/SFML.dir/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML.dir/Game.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ozgur\CLionProjects\2DSpaceShouter\Game.cpp > CMakeFiles\SFML.dir\Game.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\Game.cpp > CMakeFiles\SFML.dir\Game.cpp.i
 
 CMakeFiles/SFML.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML.dir/Game.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ozgur\CLionProjects\2DSpaceShouter\Game.cpp -o CMakeFiles\SFML.dir\Game.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\Game.cpp -o CMakeFiles\SFML.dir\Game.cpp.s
 
 CMakeFiles/SFML.dir/Practice.cpp.obj: CMakeFiles/SFML.dir/flags.make
 CMakeFiles/SFML.dir/Practice.cpp.obj: CMakeFiles/SFML.dir/includes_CXX.rsp
 CMakeFiles/SFML.dir/Practice.cpp.obj: ../Practice.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ozgur\CLionProjects\2DSpaceShouter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SFML.dir/Practice.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFML.dir\Practice.cpp.obj -c C:\Users\ozgur\CLionProjects\2DSpaceShouter\Practice.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SFML.dir/Practice.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFML.dir\Practice.cpp.obj -c C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\Practice.cpp
 
 CMakeFiles/SFML.dir/Practice.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML.dir/Practice.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ozgur\CLionProjects\2DSpaceShouter\Practice.cpp > CMakeFiles\SFML.dir\Practice.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\Practice.cpp > CMakeFiles\SFML.dir\Practice.cpp.i
 
 CMakeFiles/SFML.dir/Practice.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML.dir/Practice.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ozgur\CLionProjects\2DSpaceShouter\Practice.cpp -o CMakeFiles\SFML.dir\Practice.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\Practice.cpp -o CMakeFiles\SFML.dir\Practice.cpp.s
 
 # Object files for target SFML
 SFML_OBJECTS = \
@@ -136,7 +136,7 @@ SFML.exe: C:/SFML/lib/libFLAC.a
 SFML.exe: CMakeFiles/SFML.dir/linklibs.rsp
 SFML.exe: CMakeFiles/SFML.dir/objects1.rsp
 SFML.exe: CMakeFiles/SFML.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\ozgur\CLionProjects\2DSpaceShouter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SFML.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SFML.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SFML.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -148,6 +148,6 @@ CMakeFiles/SFML.dir/clean:
 .PHONY : CMakeFiles/SFML.dir/clean
 
 CMakeFiles/SFML.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ozgur\CLionProjects\2DSpaceShouter C:\Users\ozgur\CLionProjects\2DSpaceShouter C:\Users\ozgur\CLionProjects\2DSpaceShouter\cmake-build-debug C:\Users\ozgur\CLionProjects\2DSpaceShouter\cmake-build-debug C:\Users\ozgur\CLionProjects\2DSpaceShouter\cmake-build-debug\CMakeFiles\SFML.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\cmake-build-debug C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\cmake-build-debug C:\Users\ozgur\Documents\C++Projects\2DSpaceShouter\cmake-build-debug\CMakeFiles\SFML.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SFML.dir/depend
 

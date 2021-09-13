@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/ozgur/CLionProjects/2DSpaceShouter/Game.cpp" "C:/Users/ozgur/CLionProjects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/Game.cpp.obj"
-  "C:/Users/ozgur/CLionProjects/2DSpaceShouter/Practice.cpp" "C:/Users/ozgur/CLionProjects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/Practice.cpp.obj"
-  "C:/Users/ozgur/CLionProjects/2DSpaceShouter/main.cpp" "C:/Users/ozgur/CLionProjects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/main.cpp.obj"
+  "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Game.cpp" "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/Game.cpp.obj"
+  "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Practice.cpp" "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/Practice.cpp.obj"
+  "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/main.cpp" "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
