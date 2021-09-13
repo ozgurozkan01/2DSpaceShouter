@@ -3,9 +3,7 @@
 #include "Practice.h"
 int main()
 {
-    // My First Game
     
-
     /**
     sf::RectangleShape player(sf::Vector2f(15.f,15.f));
 
