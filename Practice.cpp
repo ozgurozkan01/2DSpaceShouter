@@ -14,7 +14,7 @@ void Practice::initVariables()
     this->points = 0;
     this->enemySpawnTimerMax = 10.f;
     this->enemySpawnTimer = this->enemySpawnTimerMax;
-    this->maxEnemies = 5;
+    this->maxEnemies = 10;
 }
 
 void Practice::initWindow()
@@ -129,9 +129,30 @@ void Practice::updateEnemies()
             this->enemySpawnTimer += 1.f;
     }
 
-    for(auto &e : this->enemies)
+    for(int i = 0; i < this->enemies.size(); i++)
     {
-        e.move(0.f,0.5f);
+        bool deleted = false ;
+        this->enemies[i].move(0.f,5.f);
+
+        // Check if clicked upon
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        {
+            if(this->enemies[i].getGlobalBounds().contains(this->mousePosView))
+            {
+                // Delete the enemy
+                this->enemies.erase(this->enemies.begin() +i);
+            }
+        }
+
+        // If the enemy is past the bottom of the screen
+        if(this->enemies[i].getPosition().y > this->window->getSize().y)
+        {
+            deleted = true;
+
+            this->points += 10.f;
+        }
+        if(deleted)
+            this->enemies.erase(this->enemies.begin() +i);
     }
 }
 
@@ -149,6 +170,7 @@ void Practice::renderEnemies()
     for(auto &e : this->enemies)
     {
         this->window->draw(e);
+
     }
 }
 
