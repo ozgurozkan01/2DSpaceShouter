@@ -128,6 +128,54 @@ SFML/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/build
 .PHONY : SFML/fast
 
+Bullet.obj: Bullet.cpp.obj
+.PHONY : Bullet.obj
+
+# target to build an object file
+Bullet.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Bullet.cpp.obj
+.PHONY : Bullet.cpp.obj
+
+Bullet.i: Bullet.cpp.i
+.PHONY : Bullet.i
+
+# target to preprocess a source file
+Bullet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Bullet.cpp.i
+.PHONY : Bullet.cpp.i
+
+Bullet.s: Bullet.cpp.s
+.PHONY : Bullet.s
+
+# target to generate assembly for a file
+Bullet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Bullet.cpp.s
+.PHONY : Bullet.cpp.s
+
+Enemy.obj: Enemy.cpp.obj
+.PHONY : Enemy.obj
+
+# target to build an object file
+Enemy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Enemy.cpp.obj
+.PHONY : Enemy.cpp.obj
+
+Enemy.i: Enemy.cpp.i
+.PHONY : Enemy.i
+
+# target to preprocess a source file
+Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Enemy.cpp.i
+.PHONY : Enemy.cpp.i
+
+Enemy.s: Enemy.cpp.s
+.PHONY : Enemy.s
+
+# target to generate assembly for a file
+Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Enemy.cpp.s
+.PHONY : Enemy.cpp.s
+
 Game.obj: Game.cpp.obj
 .PHONY : Game.obj
 
@@ -151,6 +199,30 @@ Game.s: Game.cpp.s
 Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Game.cpp.s
 .PHONY : Game.cpp.s
+
+Player.obj: Player.cpp.obj
+.PHONY : Player.obj
+
+# target to build an object file
+Player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Player.cpp.obj
+.PHONY : Player.cpp.obj
+
+Player.i: Player.cpp.i
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Player.cpp.s
+.PHONY : Player.cpp.s
 
 Practice.obj: Practice.cpp.obj
 .PHONY : Practice.obj
@@ -209,9 +281,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... SFML
+	@echo ... Bullet.obj
+	@echo ... Bullet.i
+	@echo ... Bullet.s
+	@echo ... Enemy.obj
+	@echo ... Enemy.i
+	@echo ... Enemy.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
+	@echo ... Player.obj
+	@echo ... Player.i
+	@echo ... Player.s
 	@echo ... Practice.obj
 	@echo ... Practice.i
 	@echo ... Practice.s

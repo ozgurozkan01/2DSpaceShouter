@@ -3,7 +3,7 @@ project(SFML)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SFML main.cpp Game.cpp Game.h Practice.cpp Practice.h)
+add_executable(SFML main.cpp Game.cpp Game.h Practice.cpp Practice.h Bullet.cpp Bullet.h Player.cpp Player.h Enemy.cpp Enemy.h)
 
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR C:/SFML/lib/cmake/SFML)

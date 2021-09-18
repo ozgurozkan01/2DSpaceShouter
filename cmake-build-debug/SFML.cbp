@@ -86,10 +86,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Bullet.cpp">
+			<Option target="SFML"/>
+		</Unit>
+		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Bullet.h">
+			<Option target="SFML"/>
+		</Unit>
+		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Enemy.cpp">
+			<Option target="SFML"/>
+		</Unit>
+		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Enemy.h">
+			<Option target="SFML"/>
+		</Unit>
 		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Game.cpp">
 			<Option target="SFML"/>
 		</Unit>
 		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Game.h">
+			<Option target="SFML"/>
+		</Unit>
+		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Player.cpp">
+			<Option target="SFML"/>
+		</Unit>
+		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Player.h">
 			<Option target="SFML"/>
 		</Unit>
 		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Practice.cpp">

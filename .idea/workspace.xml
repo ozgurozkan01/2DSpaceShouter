@@ -47,10 +47,16 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="SFML" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SFML" TARGET_NAME="SFML" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SFML" RUN_TARGET_NAME="SFML">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -85,6 +91,15 @@
       <workItem from="1631641450528" duration="1290000" />
       <workItem from="1631651682008" duration="4959000" />
       <workItem from="1631702020736" duration="6310000" />
+      <workItem from="1631709925083" duration="64000" />
+      <workItem from="1631721773684" duration="6188000" />
+      <workItem from="1631786374604" duration="4594000" />
+      <workItem from="1631797273775" duration="8690000" />
+      <workItem from="1631876082567" duration="2325000" />
+      <workItem from="1631900001997" duration="7139000" />
+      <workItem from="1631962108874" duration="3863000" />
+      <workItem from="1631984818273" duration="6086000" />
+      <workItem from="1631992410164" duration="828000" />
     </task>
     <servers />
   </component>
