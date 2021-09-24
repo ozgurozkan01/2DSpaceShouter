@@ -116,6 +116,12 @@
 		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Practice.h">
 			<Option target="SFML"/>
 		</Unit>
+		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Shooter.cpp">
+			<Option target="SFML"/>
+		</Unit>
+		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Shooter.h">
+			<Option target="SFML"/>
+		</Unit>
 		<Unit filename="C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/main.cpp">
 			<Option target="SFML"/>
 		</Unit>

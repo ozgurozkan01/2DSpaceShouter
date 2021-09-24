@@ -9,19 +9,32 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 #include <SFML/Window.hpp>
-
+#include "Player.h"
+#include "Enemy.h"
 
 class Bullet {
 public:
+
     sf::CircleShape shape;
     sf::Vector2f currVelocity; // anlık hız
-    float maxSpeed;
 
-    Bullet(float radius = 5.f):currVelocity(0.f,0.f), maxSpeed(10.f)
+    Shooter *owner;
+    int index;
+
+    Bullet(sf::Vector2f currVelocity, Shooter *owner, int index)
     {
-        this->shape.setRadius(radius);
-        this->shape.setFillColor(sf::Color::White);
+        this->currVelocity = currVelocity;
+        this->owner = owner;
+        this->index = index;
     }
+
+    // Player Functions
+    void SpawnPlayerBullet(sf::Vector2f mp, sf::Vector2f playerCenter);
+    void MovePlayerBullet(std::vec);
+    void Move();
+    void OnDelete();
+
+    // Enemy Functions
 };
 
 

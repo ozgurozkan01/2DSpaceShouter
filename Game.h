@@ -2,50 +2,29 @@
 #define SFML_GAME_H
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/Network.hpp>
-#include <SFML/Window.hpp>
-#include <math.h>
-#include <vector>
-#include "Game.h"
 
+#include "Bullet.h"
+#include "Player.h"
+#include "Enemy.h"
 class Game {
-private:
-    // Player
+public:
     sf::RenderWindow* window;
-
-    // Bullets
-    sf::CircleShape shape;
-    sf::Vector2f currVelocity = sf::Vector2f(0.f,0.f);
-    float maxSpeed = 15.f;
-    std::vector<sf::CircleShape> bullets;
-
     sf::Event evnt;
 
-    sf::Vector2f playerCenter;
-    sf::Vector2f mousePosWindow;
-    sf::Vector2f aimDir;
-    sf::Vector2f aimDirNorm;
+    Player pG;
+    Enemy eG;
+    Bullet bG;
 
-    sf::CircleShape player;
+    sf::Vector2f mousePosWindow;
 
     void initWindow();
-    void initPlayer();
-    void initBullet();
-public:
+
     Game();
     virtual ~Game();
 
     const bool running() const;
     void pollEvent();
-    // Player Function
-    void movePlayer();
-    void PlayerCenter();
-
-    // Bullet Fonction
-    void CreateBullet();
-    void ShootBullet();
+    void MousePosition();
 
     void update();
     void render();

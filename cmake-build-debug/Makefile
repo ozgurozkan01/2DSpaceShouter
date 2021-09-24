@@ -248,6 +248,30 @@ Practice.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Practice.cpp.s
 .PHONY : Practice.cpp.s
 
+Shooter.obj: Shooter.cpp.obj
+.PHONY : Shooter.obj
+
+# target to build an object file
+Shooter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Shooter.cpp.obj
+.PHONY : Shooter.cpp.obj
+
+Shooter.i: Shooter.cpp.i
+.PHONY : Shooter.i
+
+# target to preprocess a source file
+Shooter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Shooter.cpp.i
+.PHONY : Shooter.cpp.i
+
+Shooter.s: Shooter.cpp.s
+.PHONY : Shooter.s
+
+# target to generate assembly for a file
+Shooter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SFML.dir\build.make CMakeFiles/SFML.dir/Shooter.cpp.s
+.PHONY : Shooter.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -296,6 +320,9 @@ help:
 	@echo ... Practice.obj
 	@echo ... Practice.i
 	@echo ... Practice.s
+	@echo ... Shooter.obj
+	@echo ... Shooter.i
+	@echo ... Shooter.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

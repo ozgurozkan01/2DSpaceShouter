@@ -976,7 +976,29 @@ SFML/Config.hpp
 
 C:/SFML/include/SFML/Window/WindowStyle.hpp
 
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Bullet.cpp
+Bullet.h
 C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Bullet.h
+math.h
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/math.h
+
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Bullet.h
+SFML/Graphics.hpp
+-
+SFML/System.hpp
+-
+SFML/Audio.hpp
+-
+SFML/Network.hpp
+-
+SFML/Window.hpp
+-
+Player.h
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Player.h
+Enemy.h
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Enemy.h
+
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Enemy.h
 SFML/Graphics.hpp
 -
 SFML/System.hpp
@@ -988,9 +1010,25 @@ SFML/Network.hpp
 SFML/Window.hpp
 -
 
-C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/main.cpp
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Game.cpp
 iostream
 -
+Game.h
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Game.h
+
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Game.h
+iostream
+-
+SFML/Graphics.hpp
+-
+Bullet.h
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Bullet.h
+Player.h
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Player.h
+Enemy.h
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Enemy.h
+
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Player.h
 SFML/Graphics.hpp
 -
 SFML/System.hpp
@@ -1001,10 +1039,14 @@ SFML/Network.hpp
 -
 SFML/Window.hpp
 -
-math.h
--
 vector
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/vector
+
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/main.cpp
+SFML/Graphics.hpp
 -
-Bullet.h
-C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Bullet.h
+SFML/Audio.hpp
+-
+Game.h
+C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Game.h
 

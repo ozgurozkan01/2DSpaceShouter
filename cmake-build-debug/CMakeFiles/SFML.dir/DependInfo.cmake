@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Game.cpp" "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/Game.cpp.obj"
   "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Player.cpp" "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/Player.cpp.obj"
   "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Practice.cpp" "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/Practice.cpp.obj"
+  "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/Shooter.cpp" "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/Shooter.cpp.obj"
   "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/main.cpp" "C:/Users/ozgur/Documents/C++Projects/2DSpaceShouter/cmake-build-debug/CMakeFiles/SFML.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

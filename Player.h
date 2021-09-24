@@ -4,9 +4,27 @@
 
 #ifndef SFML_PLAYER_H
 #define SFML_PLAYER_H
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
+#include <SFML/Window.hpp>
+#include "vector"
+#include "Bullet.h"
 
+class Player : public Shooter{
+public:
 
-class Player {
+    sf::CircleShape player;
+    sf::Vector2f playerCenter;
+
+    void initPlayer();
+
+    void PlayerCenter();
+    void PlayerMovement(sf::RenderTarget* target);
+
+    void Shooting(sf::Vector2f mp);
+    void MoveBullets();
 
 };
 
