@@ -4,31 +4,25 @@
 
 #ifndef SFML_ENEMY_H
 #define SFML_ENEMY_H
+
 #include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/Network.hpp>
-#include <SFML/Window.hpp>
+
+class Shooter;
+
 #include "Shooter.h"
 
-class Enemy : public Shooter {
+class Enemy : public Shooter{
 public:
-    sf::CircleShape enemy;
+    sf::CircleShape shape;
 
-    sf::Vector2f enemyCenter;
+    Enemy()
+    {
+        InitShape();
+    }
 
-    std::vector<sf::CircleShape> enemies;
+    void InitShape();
+    void AssignPosition();
 
-    // Game Logic
-    float enemySpawnTimer;
-    float enemySpawnTimerMax;
-    int maxEnemy;
-
-
-
-    void initEnemy();
-    void EnemyCenter();
-    void CreatingEnemy(sf::RenderWindow* window);
 };
 
 

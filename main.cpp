@@ -18,8 +18,8 @@ Bullet SpawnEnemyBullet(Enemy e1, sf::Vector2f playerCenter){
 
     // Center of Enemy     bulletsE.push_back(SpawnEnemyBullet(enemies[i], playerCenter));
     auto enemyCenter = sf::Vector2f(
-            e1.enemy.getPosition().x + e1.enemy.getRadius(),
-            e1.enemy.getPosition().y + e1.enemy.getRadius());
+            e1.shape.getPosition().x + e1.shape.getRadius(),
+            e1.shape.getPosition().y + e1.shape.getRadius());
 
     // Direction of Enemy's bullets
     auto aimDirE = playerCenter - enemyCenter;
@@ -55,15 +55,16 @@ int main()
     std::srand(static_cast<unsigned>(time(NULL)));
 
     Game game;
+    game.initWindow();
     // Window
     //sf::RenderWindow window(sf::VideoMode(800,600),"My First Game", sf::Style::Default);
     // FPS
     //window.setFramerateLimit(60);
 
     // Player
-    /**sf::CircleShape player(25.f);
-    player.setPosition(sf::Vector2f(375.f,450.f));
-    player.setFillColor(sf::Color::Red);
+    /**sf::CircleShape shape(25.f);
+    shape.setPosition(sf::Vector2f(375.f,450.f));
+    shape.setFillColor(sf::Color::Red);
     sf::Vector2f playerCenter;*/
 
     // Mouse Position
@@ -91,11 +92,13 @@ int main()
     // Game Loop
     while(game.running())
     {
-        game.pollEvent();
+
         //Update
         game.update();
+
         //Render
         game.render();
+
     }
 
         // Creating Enemy
@@ -103,10 +106,10 @@ int main()
         {
             if(e1.enemySpawnTimer >= e1.enemySpawnTimerMax)
             {
-                // Spawn enemy
-                e1.enemy.setPosition(
-                        static_cast<float>(rand() % static_cast<int>(window.getSize().x - e1.enemy.getScale().x/2)),
-                        static_cast<float>(rand() % static_cast<int>(window.getSize().y - e1.enemy.getScale().y)/2));
+                // Spawn shape
+                e1.shape.setPosition(
+                        static_cast<float>(rand() % static_cast<int>(window.getSize().x - e1.shape.getScale().x/2)),
+                        static_cast<float>(rand() % static_cast<int>(window.getSize().y - e1.shape.getScale().y)/2));
 
                 enemies.push_back(e1);
 
@@ -158,7 +161,7 @@ int main()
         {
             for(size_t k = 0; k < enemies.size(); k++)
             {
-                if(bullets[i].shape.getGlobalBounds().intersects(enemies[k].enemy.getGlobalBounds()))
+                if(bullets[i].shape.getGlobalBounds().intersects(enemies[k].shape.getGlobalBounds()))
                 {
                     bullets.erase(bullets.begin()+i);
                     enemies.erase(enemies.begin()+k);
@@ -171,7 +174,7 @@ int main()
 */
         /**for(size_t i = 0; i < bulletsE.size(); i++)
         {
-            if(bulletsE[i].shape.getGlobalBounds().intersects(player.getGlobalBounds()))
+            if(bulletsE[i].shape.getGlobalBounds().intersects(shape.getGlobalBounds()))
             {
                 bulletsE.erase(bulletsE.begin()+i);
                 window.close();

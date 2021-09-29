@@ -5,12 +5,9 @@
 #ifndef SFML_BULLET_H
 #define SFML_BULLET_H
 #include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/Network.hpp>
-#include <SFML/Window.hpp>
-#include "Player.h"
-#include "Enemy.h"
+
+class Shooter;
+#include "Shooter.h"
 
 class Bullet {
 public:
@@ -19,22 +16,19 @@ public:
     sf::Vector2f currVelocity; // anlık hız
 
     Shooter *owner;
-    int index;
 
-    Bullet(sf::Vector2f currVelocity, Shooter *owner, int index)
+    Bullet(sf::Vector2f currVelocity, Shooter * owner)
     {
         this->currVelocity = currVelocity;
         this->owner = owner;
-        this->index = index;
+        InitBullet();
     }
 
-    // Player Functions
-    void SpawnPlayerBullet(sf::Vector2f mp, sf::Vector2f playerCenter);
-    void MovePlayerBullet(std::vec);
-    void Move();
-    void OnDelete();
+    void InitBullet();
+    void Move(int bulletIndex);
+    void OnDelete(int bulletIndex);
 
-    // Enemy Functions
+
 };
 
 

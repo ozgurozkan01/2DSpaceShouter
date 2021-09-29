@@ -48,7 +48,7 @@
     <property name="cmake.loaded.for.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="SFML" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SFML" TARGET_NAME="SFML" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SFML" RUN_TARGET_NAME="SFML">
@@ -59,11 +59,6 @@
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -115,7 +110,21 @@
       <workItem from="1632414901929" duration="4296000" />
       <workItem from="1632469272817" duration="10986000" />
       <workItem from="1632500552418" duration="9949000" />
-      <workItem from="1632513716657" duration="1000" />
+      <workItem from="1632513716657" duration="4202000" />
+      <workItem from="1632595353168" duration="2363000" />
+      <workItem from="1632603373435" duration="1869000" />
+      <workItem from="1632674833153" duration="2574000" />
+      <workItem from="1632678479599" duration="1805000" />
+      <workItem from="1632735960730" duration="5293000" />
+      <workItem from="1632760559001" duration="6334000" />
+      <workItem from="1632816920596" duration="4698000" />
+      <workItem from="1632825692057" duration="1334000" />
+      <workItem from="1632827214100" duration="20000" />
+      <workItem from="1632827259960" duration="528000" />
+      <workItem from="1632833943659" duration="3311000" />
+      <workItem from="1632839404994" duration="873000" />
+      <workItem from="1632855497152" duration="9087000" />
+      <workItem from="1632911289691" duration="411000" />
     </task>
     <servers />
   </component>

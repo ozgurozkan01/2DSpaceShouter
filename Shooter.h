@@ -4,26 +4,32 @@
 
 #ifndef SFML_SHOOTER_H
 #define SFML_SHOOTER_H
-#include <iostream>
-#include <vector>
+
+#include "SFML/Graphics.hpp"
+
+class Bullet;
 #include "Bullet.h"
 
 class Shooter {
 public:
-    std::vector<Bullet> bullets;
+    std::vector<Bullet*>bullets;
 
     sf::Vector2f aimDir;
     sf::Vector2f aimDirNorm;
 
-    float bulletSpeed;
+    sf::Vector2f position;
+
+    float bulletSpeed = 10.f;
 
 public:
-    void AddBullet(Bullet bullet);
+    void AddBullet(Bullet* bullet);
     void DeleteBullet(int index);
-    void CalculateDirection(sf::Vector2f mousePos, sf::Vector2f shooterPos);
+    void CalculateDirection(sf::Vector2f mousePos);
     void CalculateAimNorm();
-    void CreateBullet(sf::Vector2f mousePos, sf::Vector2f shooterPos);
-};
+    Bullet* CreateBullet(sf::Vector2f mousePos);
+    void Fire(sf::Vector2f mousePos);
 
+
+};
 
 #endif //SFML_SHOOTER_H

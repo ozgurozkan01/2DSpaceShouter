@@ -1,51 +1,30 @@
-//
-// Created by ozgur on 9/18/2021.
-//
+
 #include "Bullet.h"
-#include "math.h"
 
-/*
-Bullet::Bullet()
-{
-    currVelocity = sf::Vector2f (0.f,0.f);
-    speed = 10.f;
-
-    this->shape.setRadius(5.f);
-    this->shape.setFillColor(sf::Color::White);
-}
-
-*/
-
-void Bullet::SpawnPlayerBullet(sf::Vector2f mp, sf::Vector2f playerCenter)
-{
-    //aimDir = mp - playerCenter;
-    //aimDirNorm = aimDir / static_cast<float>(sqrt(pow(aimDir.x, 2) + pow(aimDir.y, 2)));
-    currVelocity = aimDirNorm * speed;
-
-    if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
-    {
-        shape.setPosition(playerCenter);
-        bullets.push_back(shape);
-    }
-}
-
-void Bullet::Move()
+void Bullet::Move(int bulletIndex)
 {
     shape.move(currVelocity);
 
-    if(shape.getPosition().x >= 800 ||
-       shape.getPosition().x <= 0 ||
-       shape.getPosition().y <= 0 ||
-       shape.getPosition().y >= 600)
+    if( shape.getPosition().x >= 800 ||
+        shape.getPosition().x <= 0 ||
+        shape.getPosition().y <= 0 ||
+        shape.getPosition().y >= 600)
     {
-        OnDelete();
+        OnDelete(bulletIndex);
     }
 }
 
-void Bullet::OnDelete()
+void Bullet::OnDelete(int bulletIndex)
 {
-    owner.DeleteBullet(index);
+    owner->DeleteBullet(bulletIndex);
+}
 
-    delete this;
+void Bullet::InitBullet()
+{
+    shape.setRadius(1.f);
+    shape.setFillColor(sf::Color::Blue);
+    shape.setPosition(owner->position);
+    shape.setOutlineThickness(3.f);
+    shape.setOutlineColor(sf::Color::Red);
 }
 

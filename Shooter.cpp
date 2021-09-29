@@ -4,7 +4,8 @@
 
 #include "Shooter.h"
 #include "math.h"
-void Shooter::AddBullet(Bullet bullet)
+
+void Shooter::AddBullet(Bullet* bullet)
 {
     bullets.push_back(bullet);
 }
@@ -14,22 +15,24 @@ void Shooter::DeleteBullet(int index)
     bullets.erase(bullets.begin() + index);
 }
 
+Bullet* Shooter::CreateBullet(sf::Vector2f mousePos)
+{
+    CalculateDirection(mousePos);
+    return new Bullet(bulletSpeed * aimDirNorm, this);
+}
+
+void Shooter::CalculateDirection(sf::Vector2f mousePos)
+{
+    aimDir = mousePos - position;
+    CalculateAimNorm();
+}
+
 void Shooter::CalculateAimNorm()
 {
     aimDirNorm = aimDir / static_cast<float>(sqrt(pow(aimDir.x, 2) + pow(aimDir.y, 2)));
 }
 
-void Shooter::CalculateDirection(sf::Vector2f mousePos, sf::Vector2f shooterPos)
+void Shooter::Fire(sf::Vector2f mousePos)
 {
-    aimDir = mousePos - shooterPos;
-    CalculateAimNorm();
-}
-
-void Shooter::CreateBullet(sf::Vector2f mousePos, sf::Vector2f shooterPos)
-{
-    CalculateDirection(mousePos, shooterPos);
-
-    sf::Vector2f x = bulletSpeed * aimDirNorm;
-
-    auto bullet = new Bullet(x, this, 5);
+    AddBullet(CreateBullet(mousePos));
 }
