@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="SFML" targetName="SFML" />
@@ -56,13 +59,16 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\ozgur\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b658858a-c04e-4f51-bb16-1568bcc0f36a" name="Changes" comment="" />
@@ -124,7 +130,24 @@
       <workItem from="1632833943659" duration="3311000" />
       <workItem from="1632839404994" duration="873000" />
       <workItem from="1632855497152" duration="9087000" />
-      <workItem from="1632911289691" duration="411000" />
+      <workItem from="1632911289691" duration="10509000" />
+      <workItem from="1632931200735" duration="2270000" />
+      <workItem from="1632993016774" duration="1682000" />
+      <workItem from="1632997616097" duration="1162000" />
+      <workItem from="1632998829892" duration="776000" />
+      <workItem from="1633000662700" duration="333000" />
+      <workItem from="1633030768478" duration="2775000" />
+      <workItem from="1633081372034" duration="6021000" />
+      <workItem from="1633283717760" duration="2695000" />
+      <workItem from="1633321153622" duration="1216000" />
+      <workItem from="1633327960655" duration="4925000" />
+      <workItem from="1633407549308" duration="3076000" />
+      <workItem from="1633415529615" duration="594000" />
+      <workItem from="1633418114195" duration="1591000" />
+      <workItem from="1633445390262" duration="3990000" />
+      <workItem from="1633535487389" duration="3537000" />
+      <workItem from="1633622321714" duration="1416000" />
+      <workItem from="1633625256110" duration="191000" />
     </task>
     <servers />
   </component>
@@ -142,5 +165,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

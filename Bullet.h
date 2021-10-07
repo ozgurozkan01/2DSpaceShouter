@@ -16,6 +16,7 @@ public:
     sf::Vector2f currVelocity; // anlık hız
 
     Shooter *owner;
+    float damage;
 
     Bullet(sf::Vector2f currVelocity, Shooter * owner)
     {

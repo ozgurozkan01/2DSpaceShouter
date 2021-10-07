@@ -34,16 +34,18 @@ void Player::PlayerMovement(sf::RenderTarget* target)
     if(shape.getGlobalBounds().top + shape.getGlobalBounds().height >= target->getSize().y)
         shape.setPosition(shape.getGlobalBounds().left, target->getSize().y - shape.getGlobalBounds().height);
 
-
     AssignPosition();
 
 }
 
 void Player::InitShape()
 {
-    shape.setFillColor(sf::Color::Red);
+    shape.setFillColor(sf::Color::Cyan);
+    shape.setOutlineThickness(1.f);
+    shape.setOutlineColor(sf::Color::White);
     shape.setRadius(25.f);
     shape.setPosition(sf::Vector2f(375.f, 450.f));
+
 }
 
 

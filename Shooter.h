@@ -1,7 +1,3 @@
-//
-// Created by ozgur on 9/24/2021.
-//
-
 #ifndef SFML_SHOOTER_H
 #define SFML_SHOOTER_H
 
@@ -13,6 +9,8 @@ class Bullet;
 class Shooter {
 public:
     std::vector<Bullet*>bullets;
+
+    float damage = 5.f;
 
     sf::Vector2f aimDir;
     sf::Vector2f aimDirNorm;

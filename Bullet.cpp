@@ -24,7 +24,8 @@ void Bullet::InitBullet()
     shape.setRadius(1.f);
     shape.setFillColor(sf::Color::Blue);
     shape.setPosition(owner->position);
-    shape.setOutlineThickness(3.f);
+    shape.setOutlineThickness(1.f);
     shape.setOutlineColor(sf::Color::Red);
+    damage = 5.f;
 }
 

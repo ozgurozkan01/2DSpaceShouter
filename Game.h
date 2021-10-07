@@ -15,30 +15,51 @@ public:
 
     std::vector<Enemy*> enemies;
 
+    sf::RectangleShape playerHpBar;
+    sf::RectangleShape playerRestHpBar;
+
+    float playerRestHpBar_x;
+    float playerRestHpBar_y;
+
     // Game Logic
-    float enemySpawnTimerMax = 250.f;
+    float enemySpawnTimerMax;
     float enemySpawnTimer;
 
     int maxEnemy = 3;
+    int enemyCounter = 0;
 
-    float enemyBulletTimerMax = 100.f;
+    float enemyBulletTimerMax;
     float enemyBulletTimer;
 
+    float playerHpTimerMax;
+    float playerHpTimer;
+
+    float enemiesHpTimerMax;
+    float enemiesHpTimer;
+
+    float attackCoolDownMax;
+    float attackCoolDown;
 
     Player* player;
 
     sf::Vector2f mousePosWindow;
 
-    void initWindow();
-
     Game();
     virtual ~Game();
 
+    void InitWindow();
     const bool running() const;
     void pollEvent();
     void MousePosition();
     void DrawBullets();
     void BulletsMove();
+    void KillingEnemies();
+    void KillingPlayer();
+    void DeathEnemyCounter();
+    void IncreaseEnemySpawnRate();
+    void InitTimerVariables();
+    void InitPlayerHpBar();
+    void DrawPlayerHpBar();
 
     // PLAYER
     void CreatePlayer();
@@ -46,6 +67,9 @@ public:
     void DrawPlayer();
     void PlayerFire();
     void PlayerBulletsMove();
+    void HealPlayer();
+    void UpdateAttack();
+    const bool CanAttack();
 
     // ENEMY
     void DrawEnemyBullets();
@@ -54,6 +78,7 @@ public:
     void EnemiesFire();
     void EnemiesBulletsMove();
     void FireEnemiesBullet();
+    void HealEnemies();
 
     // GAME
     void update();

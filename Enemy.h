@@ -14,6 +14,7 @@ class Shooter;
 class Enemy : public Shooter{
 public:
     sf::CircleShape shape;
+    float Hp;
 
     Enemy()
     {

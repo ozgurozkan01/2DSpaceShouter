@@ -9,7 +9,7 @@
 
 class Bullet;
 class Shooter;
-#include "vector"
+
 #include "Bullet.h"
 #include "Shooter.h"
 

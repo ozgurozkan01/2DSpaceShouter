@@ -397,23 +397,6 @@ CMakeFiles/SFML.dir/Shooter.cpp.obj: \
  ../Shooter.cpp \
  ../Shooter.h
 CMakeFiles/SFML.dir/main.cpp.obj: \
- C:/SFML/include/SFML/Audio.hpp \
- C:/SFML/include/SFML/Audio/AlResource.hpp \
- C:/SFML/include/SFML/Audio/Export.hpp \
- C:/SFML/include/SFML/Audio/InputSoundFile.hpp \
- C:/SFML/include/SFML/Audio/Listener.hpp \
- C:/SFML/include/SFML/Audio/Music.hpp \
- C:/SFML/include/SFML/Audio/OutputSoundFile.hpp \
- C:/SFML/include/SFML/Audio/Sound.hpp \
- C:/SFML/include/SFML/Audio/SoundBuffer.hpp \
- C:/SFML/include/SFML/Audio/SoundBufferRecorder.hpp \
- C:/SFML/include/SFML/Audio/SoundFileFactory.hpp \
- C:/SFML/include/SFML/Audio/SoundFileFactory.inl \
- C:/SFML/include/SFML/Audio/SoundFileReader.hpp \
- C:/SFML/include/SFML/Audio/SoundFileWriter.hpp \
- C:/SFML/include/SFML/Audio/SoundRecorder.hpp \
- C:/SFML/include/SFML/Audio/SoundSource.hpp \
- C:/SFML/include/SFML/Audio/SoundStream.hpp \
  C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/Graphics.hpp \
  C:/SFML/include/SFML/Graphics/BlendMode.hpp \

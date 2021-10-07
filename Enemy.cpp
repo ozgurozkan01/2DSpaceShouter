@@ -15,9 +15,10 @@ void Enemy::AssignPosition()
 void Enemy::InitShape()
 {
     shape.setRadius(25.f);
-    shape.setFillColor(sf::Color::Cyan);
-    shape.setOutlineColor(sf::Color::Red);
+    shape.setFillColor(sf::Color::Green);
+    shape.setOutlineColor(sf::Color::Blue);
     shape.setOutlineThickness(10.f);
+    Hp = 50.f;
 }
 
 
