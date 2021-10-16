@@ -21,27 +21,15 @@ void Game::InitPlayerHpBar()
     playerRestHpBar.setPosition(50.f, 10.f);
 }
 
-void Game::InitTimerVariables()
-{
-    enemySpawnTimerMax = 200.f;
-    enemySpawnTimer = enemySpawnTimerMax;
-
-    enemyBulletTimerMax = 150.f;
-    enemyBulletTimer = enemyBulletTimerMax;
-
-    playerHpTimerMax = 200.f;
-    playerHpTimer = playerHpTimerMax;
-
-    enemiesHpTimerMax = 200.f;
-    enemiesHpTimer = enemySpawnTimerMax;
-
-    attackCoolDownMax = 10.f;
-    attackCoolDown = attackCoolDownMax;
-}
-
 void Game::MousePosition()
 {
     mousePosWindow = sf::Vector2f(sf::Mouse::getPosition(*window));
+}
+
+void Game::CalcDeltaTime()
+{
+    time = clock.restart();
+    deltaTime = time.asSeconds();
 }
 
 const bool Game::running()const
@@ -70,7 +58,6 @@ void Game::pollEvent()
 Game::Game()
 {
     this->InitWindow();
-    this->InitTimerVariables();
     this->InitPlayerHpBar();
     this->CreatePlayer();
     this->CreatingEnemy();
@@ -91,16 +78,25 @@ void Game::DrawPlayer()
     window->draw(player->shape);
 }
 
+void Game::Timer()
+{
+    enemySpawnTimer += deltaTime;
+
+    enemyBulletTimer += deltaTime;
+
+    playerHpTimer += deltaTime;
+
+    enemiesHpTimer += deltaTime;
+}
+
 void Game::CreatingEnemy()
 {
     if(enemies.size() < maxEnemy)
     {
-
         auto enemy = new Enemy();
 
-        if(enemySpawnTimer >= enemySpawnTimerMax)
+        if(enemySpawnTimer >= 3.f)
         {
-            // Spawn shape
             enemy->shape.setPosition(
                     static_cast<float>(rand() % static_cast<int>(window->getSize().x - enemy->shape.getGlobalBounds().width)),
                     static_cast<float>(rand() % static_cast<int>(window->getSize().y - enemy->shape.getGlobalBounds().height)));
@@ -108,11 +104,8 @@ void Game::CreatingEnemy()
             enemy->AssignPosition();
             enemies.push_back(enemy);
 
-
-            enemySpawnTimer = 0.f;
+            enemySpawnTimer = 0;
         }
-        else
-            enemySpawnTimer += 2.f;
     }
 }
 
@@ -137,12 +130,11 @@ void Game::DrawEnemyBullets()
 
 void Game::CreatePlayer()
 {
-    player = new Player();
-
+    player = new Player(350.f);
 }
 
-void Game::DrawPlayerBullets() {
-
+void Game::DrawPlayerBullets()
+{
     for(int i = 0; i < player->bullets.size(); i++)
     {
         window->draw(player->bullets[i]->shape);
@@ -171,13 +163,11 @@ void Game::EnemiesFire()
 void Game::FireEnemiesBullet()
 {
 
-    if(enemyBulletTimer >= enemyBulletTimerMax)
+    if(enemyBulletTimer >= 1.f)
     {
         EnemiesFire();
-        enemyBulletTimer = 0.f;
+        enemyBulletTimer = 0;
     }
-    else
-        enemyBulletTimer += 1.f;
 }
 
 
@@ -214,27 +204,8 @@ void Game::KillingEnemies()
         {
             if(player->bullets[i]->shape.getGlobalBounds().intersects(enemies[j]->shape.getGlobalBounds()))
             {
-                enemies[j]->Hp -= player->damage;
-                if(enemies[j]->Hp < 35 && enemies[j]->Hp >= 20)
-                {
                     player->bullets.erase(player->bullets.begin() + i);
-                    enemies[j]->shape.setFillColor(sf::Color::Yellow);
-                }
-
-                if(enemies[j]->Hp < 20 && enemies[j]->Hp >0)
-                {
-                    player->bullets.erase(player->bullets.begin() + i);
-                    enemies[j]->shape.setFillColor(sf::Color::Red);
-                }
-
-                if(enemies[j]->Hp <= 0)
-                {
-                    player->bullets.erase(player->bullets.begin() + i);
-                    enemies.erase(enemies.begin() + j);
-
-                    DeathEnemyCounter();
-
-                }
+                    enemies[j]->Hp -= player->damage;
             }
         }
     }
@@ -250,7 +221,6 @@ void Game::KillingPlayer()
             if ((player->shape.getGlobalBounds().intersects(enemies[i]->bullets[j]->shape.getGlobalBounds())))
             {
                 playerRestHpBar_x -= enemies[i]->bullets[j]->damage;
-                std::cout << playerRestHpBar_x << std::endl;
                 playerRestHpBar.setSize(sf::Vector2f(playerRestHpBar_x, playerRestHpBar_y));
 
                 enemies[i]->bullets.erase(enemies[i]->bullets.begin() + j);
@@ -265,17 +235,12 @@ void Game::KillingPlayer()
     }
 }
 
-void Game::HealPlayer()
+void Game::UpdatePlayerHp()
 {
-    if(playerHpTimer < playerHpTimerMax)
-    {
-        playerHpTimer++;
-    }
-
-    else if(playerHpTimer >= playerHpTimerMax)
+    if(playerHpTimer >= 5.f)
     {
         if(playerRestHpBar_x <= 250.f)
-        {
+
             playerRestHpBar_x +=25.f;
 
             if(playerRestHpBar_x > 250.f)
@@ -284,46 +249,54 @@ void Game::HealPlayer()
             }
 
             playerRestHpBar.setSize(sf::Vector2f(playerRestHpBar_x, playerRestHpBar_y));
+            
             playerHpTimer = 0.f;
-
-        }
     }
+
 }
 
-void Game::HealEnemies()
+void Game::UpdateEnemiesHp()
 {
-    if(enemiesHpTimer < enemiesHpTimerMax)
-    {
-        enemiesHpTimer++;
-    }
-
-    else if(enemiesHpTimer >= enemiesHpTimerMax)
+    if(enemiesHpTimer >= 1.f)
     {
         for(int i = 0; i < enemies.size(); i++)
         {
             enemies[i]->Hp += 3.f;
 
             if(enemies[i]->Hp > 50.f)
-            {
                 enemies[i]->Hp = 50.f;
-            }
-
-            if(enemies[i]->Hp >= 35 && enemies[i]->Hp <= 50)
-            {
-                enemies[i]->shape.setFillColor(sf::Color::Green);
-            }
-
-            else if(enemies[i]->Hp < 35 && enemies[i]->Hp >= 20)
-            {
-                enemies[i]->shape.setFillColor(sf::Color::Yellow);
-            }
 
         }
-
         enemiesHpTimer = 0.f;
+    }
+}
+
+void Game::UpdateEnemiesColor()
+{
+    for(int i = 0; i < enemies.size(); i++)
+    {
+        if(enemies[i]->Hp >= 35 && enemies[i]->Hp <= 50)
+        {
+            enemies[i]->shape.setFillColor(sf::Color::Green);
+        }
+
+        else if(enemies[i]->Hp < 35 && enemies[i]->Hp >= 20)
+        {
+            enemies[i]->shape.setFillColor(sf::Color::Yellow);
+        }
+
+        else if(enemies[i]->Hp < 20 && enemies[i]->Hp > 0)
+        {
+            enemies[i]->shape.setFillColor(sf::Color::Red);
+        }
+
+        else if(enemies[i]->Hp <= 0)
+        {
+            enemies.erase(enemies.begin() + i);
+            DeathEnemyCounter();
+        }
 
     }
-
 }
 
 void Game::DeathEnemyCounter()
@@ -334,23 +307,13 @@ void Game::DeathEnemyCounter()
     {
         maxEnemy += 1;
         enemyCounter = 0;
-        IncreaseEnemySpawnRate();
-    }
-}
-
-void Game::IncreaseEnemySpawnRate()
-{
-    enemySpawnTimerMax -= 25.f;
-
-    if(enemySpawnTimerMax == 0)
-    {
-        enemySpawnTimerMax = 0;
+        player->damage += 2.f;
     }
 }
 
 const bool Game::CanAttack()
 {
-    if(this->attackCoolDown >= this->attackCoolDownMax)
+    if(this->attackCoolDown >= 0.5f)
     {
         attackCoolDown = 0.f;
         return true;
@@ -359,10 +322,10 @@ const bool Game::CanAttack()
     return false;
 }
 
-void Game::UpdateAttack()
+void Game:: UpdateAttack()
 {
-    if(this->attackCoolDown < this->attackCoolDownMax)
-        this->attackCoolDown += 0.5f;
+    if(this->attackCoolDown < 0.5f)
+        this->attackCoolDown += deltaTime;
 
 }
 
@@ -374,18 +337,20 @@ void Game::DrawPlayerHpBar()
 
 void Game::update()
 {
+    this->Timer();
     this->pollEvent();
     this->MousePosition();
+    this->CreatingEnemy();
     this->BulletsMove();
     this->KillingEnemies();
     this->KillingPlayer();
-    this->HealPlayer();
-    this->HealEnemies();
+    this->UpdatePlayerHp();
+    this->UpdateEnemiesHp();
     this->UpdateAttack();
-
+    this->UpdateEnemiesColor();
 
     //Player
-    this->player->PlayerMovement(window);
+    this->player->PlayerMovement(window, deltaTime);
 
     if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && CanAttack())
     {
@@ -393,7 +358,6 @@ void Game::update()
     }
 
     // Enemy
-    this->CreatingEnemy();
     FireEnemiesBullet();
 }
 
@@ -405,9 +369,12 @@ void Game::render()
     this->DrawEnemies();
     this->DrawBullets();
     this->DrawPlayerHpBar();
+    this->window->draw(text);
 
     this->window->display();
 }
+
+
 
 
 

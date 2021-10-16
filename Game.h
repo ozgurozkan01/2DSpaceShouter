@@ -13,6 +13,13 @@ public:
     sf::RenderWindow* window;
     sf::Event evnt;
 
+    sf::Font font;
+    sf::Text text;
+
+    sf::Clock clock;
+    sf::Time time;
+    float deltaTime;
+
     std::vector<Enemy*> enemies;
 
     sf::RectangleShape playerHpBar;
@@ -22,22 +29,14 @@ public:
     float playerRestHpBar_y;
 
     // Game Logic
-    float enemySpawnTimerMax;
-    float enemySpawnTimer;
 
     int maxEnemy = 3;
-    int enemyCounter = 0;
+    int enemyCounter;
 
-    float enemyBulletTimerMax;
+    float enemySpawnTimer;
     float enemyBulletTimer;
-
-    float playerHpTimerMax;
     float playerHpTimer;
-
-    float enemiesHpTimerMax;
     float enemiesHpTimer;
-
-    float attackCoolDownMax;
     float attackCoolDown;
 
     Player* player;
@@ -56,10 +55,10 @@ public:
     void KillingEnemies();
     void KillingPlayer();
     void DeathEnemyCounter();
-    void IncreaseEnemySpawnRate();
-    void InitTimerVariables();
     void InitPlayerHpBar();
     void DrawPlayerHpBar();
+    void CalcDeltaTime();
+    void Timer();
 
     // PLAYER
     void CreatePlayer();
@@ -67,7 +66,7 @@ public:
     void DrawPlayer();
     void PlayerFire();
     void PlayerBulletsMove();
-    void HealPlayer();
+    void UpdatePlayerHp();
     void UpdateAttack();
     const bool CanAttack();
 
@@ -78,7 +77,8 @@ public:
     void EnemiesFire();
     void EnemiesBulletsMove();
     void FireEnemiesBullet();
-    void HealEnemies();
+    void UpdateEnemiesHp();
+    void UpdateEnemiesColor();
 
     // GAME
     void update();

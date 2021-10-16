@@ -5,20 +5,20 @@
 #include "Player.h"
 
 
-void Player::PlayerMovement(sf::RenderTarget* target)
+void Player::PlayerMovement(sf::RenderTarget* target, float deltaTime)
 {
     // MOVEMENT OF PLAYER
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)){ // Manuel moving character
-        shape.move(-5.f, 0.0f);
+        shape.move(-movementSpeed * deltaTime, 0.0f);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)){ // Manuel moving character
-        shape.move(0.f, 5.f);
+        shape.move(0.f, movementSpeed * deltaTime);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)){ // Manuel moving character
-        shape.move(5.f, 0.0f);
+        shape.move(movementSpeed * deltaTime, 0.0f);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)){ // Manuel moving character
-        shape.move(0.0f, -5.f);
+        shape.move(0.0f, -movementSpeed * deltaTime);
     }
 
     // BOUNDS OF WINDOW

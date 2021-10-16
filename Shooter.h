@@ -10,7 +10,7 @@ class Shooter {
 public:
     std::vector<Bullet*>bullets;
 
-    float damage = 5.f;
+    float damage = 10.f;
 
     sf::Vector2f aimDir;
     sf::Vector2f aimDirNorm;

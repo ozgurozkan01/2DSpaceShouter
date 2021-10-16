@@ -12,6 +12,7 @@ int main()
     // Game Loop
     while(game.running())
     {
+        game.CalcDeltaTime();
         //Update
         game.update();
 

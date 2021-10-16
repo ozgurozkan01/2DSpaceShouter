@@ -17,16 +17,18 @@ class Player : public Shooter{
 public:
 
     sf::CircleShape shape;
+    float movementSpeed;
 
-    Player()
+    Player(float movementSpeed)
     {
+        this->movementSpeed = movementSpeed;
         InitShape();
         AssignPosition();
     }
 
     void InitShape();
     void AssignPosition();
-    void PlayerMovement(sf::RenderTarget* target);
+    void PlayerMovement(sf::RenderTarget* target, float deltaTime);
 
 };
 
